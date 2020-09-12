@@ -1,10 +1,18 @@
 class VirusFactory {
 
-    fun makeVirus(type: String): Virus {
+
+    fun makeVirus(type: VirusType): Virus {
         return when (type) {
-            "corona" -> CoronaVirus()
-            "inFluenzaVirus" -> InFluenzaVirus()
+            VirusType.CORONA -> CoronaVirus()
+            VirusType.INFLUENZA -> InFluenzaVirus()
             else -> HIVVirus()
         };
     }
+
+}
+
+enum class VirusType{
+    CORONA,
+    INFLUENZA,
+    HIV
 }

@@ -1,6 +1,5 @@
 fun main() {
     val virus:Virus;
-    virus = VirusFactory().makeVirus("inFluenzaVirus");
-
+    virus = VirusFactory().makeVirus(VirusType.INFLUENZA);
     virus.mutate();
 }
